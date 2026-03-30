@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# API keys and secrets
+.env
+*.key
+
+# Power Automate exports (keep the zip, ignore extracted)
+PowerAutomate_Export/
+
+# Editor files
+.vscode/
+*.swp
