@@ -3,7 +3,7 @@
 
 ---
 
-## Who This Is For
+## 👥 Who This Is For
 
 - Sales teams running outbound at scale using HubSpot as their primary CRM
 - Companies that need automated lead scoring, multi-channel routing, and progressive engagement tracking without manual SDR overhead
@@ -11,13 +11,13 @@
 
 ---
 
-## Architecture at a Glance
+## 🗺️ Architecture at a Glance
 
 The engine is a 4-workflow system spanning Power Automate, HubSpot, and HeyReach. Power Automate handles ingestion and AI enrichment, pushing Apollo-sourced leads into HubSpot with OpenAI-generated ICP scores, reasoning, and personalized icebreakers. HubSpot orchestrates all downstream logic: intent-based routing across three tiers, lifecycle stage management, automated email outreach, and progressive engagement tracking. HeyReach handles LinkedIn outreach for high-fit leads, receiving contacts via webhook from HubSpot's routing workflow. A real-time dashboard surfaces pipeline distribution, engagement funnel metrics, and enrichment source analytics.
 
 ---
 
-## Example: One Lead's Journey
+## 🔁 Example: One Lead's Journey
 
 1. **Apollo/Clay Export:** A CSV of ICP-targeted executives is exported from Apollo or Clay with firmographic data (name, title, company, industry, employee count, technologies, revenue).
 2. **Power Automate Ingestion:** The CSV lands in a OneDrive folder. Power Automate triggers, reads each row from the Excel table, and sends the lead's data to OpenAI GPT-4o-mini.
@@ -36,7 +36,7 @@ The engine is a 4-workflow system spanning Power Automate, HubSpot, and HeyReach
 
 **Trigger:** New file created in OneDrive folder (/Documents/GTM Lead Drops).
 
-<img src="./Assets/PowerAutomate_Ingestion_Flow.png" width="100%" alt="Power Automate Ingestion Flow">
+<img src="./Assets/PowerAutomate_Ingestion_Flow.png" width="300" alt="Power Automate Ingestion Flow">
 
 **Processing Pipeline:**
 - **Excel Parsing:** "List rows present in a table" reads all rows from the uploaded Apollo export.
@@ -151,7 +151,7 @@ Real-time dashboard with four reports, all sourced from Contact data:
 
 ---
 
-## Technology Stack
+## 🏗️ Technology Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -163,7 +163,7 @@ Real-time dashboard with four reports, all sourced from Contact data:
 
 ---
 
-## System Topology
+## 🔧 System Topology
 
 **7 Active Workflows:**
 
@@ -177,7 +177,7 @@ Real-time dashboard with four reports, all sourced from Contact data:
 
 ---
 
-## What I'd Improve in Production
+## 🚀 What I'd Improve in Production
 
 - **Closed-Loop Scoring Optimization:** Add a weekly audit workflow (similar to the n8n Outbound Engine's GPT-4o rubric analysis) that aggregates conversion rates by ICP Score bucket and proposes rubric refinements based on actual outcomes.
 - **Shadow Ledger:** Implement an immutable audit trail logging every workflow execution, API cost, and error across all systems — the same pattern proven in the n8n engine.
