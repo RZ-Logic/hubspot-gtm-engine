@@ -36,7 +36,7 @@ The engine is a 4-workflow system spanning Power Automate, HubSpot, and HeyReach
 
 **Trigger:** New file created in OneDrive folder (/Documents/GTM Lead Drops).
 
-<img src="./Assets/PowerAutomate_Ingestion_Flow.png" width="300" alt="Power Automate Ingestion Flow">
+<img src="./assets/PowerAutomate_Ingestion_Flow.png" width="300" alt="Power Automate Ingestion Flow">
 
 **Processing Pipeline:**
 - **Excel Parsing:** "List rows present in a table" reads all rows from the uploaded Apollo export.
@@ -56,7 +56,7 @@ The engine is a 4-workflow system spanning Power Automate, HubSpot, and HeyReach
 
 **Trigger:** Contact property "ICP Score" is known.
 
-<img src="./Assets/HubSpot_Routing_Workflow.png" width="100%" alt="HubSpot ICP Score Routing Workflow">
+<img src="./assets/HubSpot_Routing_Workflow.png" width="60%" alt="HubSpot ICP Score Routing Workflow">
 
 **Branch Logic (evaluated top-down):**
 
@@ -80,7 +80,7 @@ The engine is a 4-workflow system spanning Power Automate, HubSpot, and HeyReach
 
 **Campaign Structure (conditional multi-branch sequence):**
 
-<img src="./Assets/HeyReach_Campaign_Sequence.png" width="100%" alt="HeyReach LinkedIn Campaign Sequence">
+<img src="./assets/HeyReach_Campaign_Sequence.png" width="50%" alt="HeyReach LinkedIn Campaign Sequence">
 
 1. **View Profile** — Warm-up engagement before connection request
 2. **3-Hour Delay** — Natural pacing
@@ -97,8 +97,8 @@ The engine is a 4-workflow system spanning Power Automate, HubSpot, and HeyReach
 
 Each workflow updates a custom dropdown property "Engagement Status" to track progressive lead engagement.
 
-<img src="./Assets/HubSpot_Email_Opened.png" width="49%" alt="Email Opened Workflow"> <img src="./Assets/HubSpot_Email_Clicked.png" width="49%" alt="Email Clicked Workflow">
-<img src="./Assets/HubSpot_Email_Replied.png" width="49%" alt="Email Replied Workflow"> <img src="./Assets/HubSpot_Meeting_Booked.png" width="49%" alt="Meeting Booked Workflow">
+<img src="./assets/HubSpot_Email_Opened.png" width="30%" alt="Email Opened Workflow"> <img src="./assets/HubSpot_Email_Clicked.png" width="30%" alt="Email Clicked Workflow">
+
 
 ### 3a: Email Opened
 - **Trigger:** Property "Marketing emails opened" value changed
@@ -107,6 +107,8 @@ Each workflow updates a custom dropdown property "Engagement Status" to track pr
 ### 3b: Email Clicked
 - **Trigger:** Property "Marketing emails clicked" value changed
 - **Action:** Set Engagement Status to "Clicked"
+
+<img src="./assets/HubSpot_Email_Replied.png" width="30%" alt="Email Replied Workflow"> <img src="./assets/HubSpot_Meeting_Booked.png" width="30%" alt="Meeting Booked Workflow">
 
 ### 3c: Email Replied
 - **Trigger:** "Replied to marketing email" event completed
@@ -127,7 +129,7 @@ Each workflow updates a custom dropdown property "Engagement Status" to track pr
 
 Real-time dashboard with four reports, all sourced from Contact data:
 
-<img src="./Assets/HubSpot_GTM_Dashboard.png" width="100%" alt="GTM Engine Performance Dashboard">
+<img src="./assets/HubSpot_GTM_Dashboard.png" width="100%" alt="GTM Engine Performance Dashboard">
 
 | Report | Type | Displaying | Measured By |
 |--------|------|-----------|-------------|
